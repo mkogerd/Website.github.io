@@ -1,0 +1,49 @@
+body {
+	background-color: lightgrey;
+	text-align:center;
+}
+
+.title {
+	display: block;
+	
+	
+	padding-top:10px;
+	padding-bottom: 10px;
+	width: 100%;
+	margin-left: -8px;
+	margin-top:-8px;
+	padding-right: 16px;
+	background-color: black;
+	<!-- margin-left: -8px; <!-- Why is this necessary to touch edge of screen -->
+}
+
+
+.title h1 {
+	color: white;
+	font-size: 30px;
+}
+.nav {
+	font-size: 0;
+	list-style-type:none;
+}
+.nav ul{
+	padding-right: 10%;
+	padding-left: 10%;
+}
+.nav li {
+	font-size: 20px;
+	width: 20%;
+	text-align: center;	
+	display: inline-block;
+}
+
+.footer {
+	position: fixed;
+	bottom:0;
+	
+	width: 100%;
+	padding-bottom:5%;
+	margin-left:-8px;
+	
+	background: black;
+}
