@@ -3,6 +3,10 @@ body {
 	text-align:center;
 }
 
+body h1{
+	font-style: oblique;
+}
+
 .title {
 	display: block;
 	
@@ -47,3 +51,10 @@ body {
 	
 	background: black;
 }
+.blog {
+	background-color: white;
+	padding-bottom: 4px;
+}
+.blog p {
+	text-align: justify;
+}	
