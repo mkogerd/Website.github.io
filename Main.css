@@ -1,28 +1,26 @@
-body {
+ html, body {
 	background-color: lightgrey;
-	text-align:center;
+	text-align: center;
+	margin:0 ;
+	display: table;
+	height: 100%;
+	width: 100%;
 }
 
-body h1{
-	font-style: oblique;
-}
-
-.title {
+.header {
 	display: block;
-	
 	
 	padding-top:10px;
 	padding-bottom: 10px;
 	width: 100%;
-	margin-left: -8px;
-	margin-top:-8px;
-	padding-right: 16px;
+	
 	background-color: black;
-	<!-- margin-left: -8px; <!-- Why is this necessary to touch edge of screen -->
 }
 
 
-.title h1 {
+.header h1 {
+	font-family: "Impact", Times, serif;
+	font-style: oblique;
 	color: white;
 	font-size: 30px;
 }
@@ -41,21 +39,24 @@ body h1{
 	display: inline-block;
 }
 
-.footer {
-	position: fixed;
-	bottom:0;
-	
-	width: 100%;
-	padding-bottom:5%;
-	margin-left:-8px;
-	
-	background: black;
-}
 .blog {
 	background-color: white;
 	margin:10% 10%;
 	padding-bottom: 4px;
 }
+.blog h2 {
+	text-decoration: underline;
+}
 .blog p {
 	text-align: justify;
 }	
+.wrapper {
+	padding:20px;
+	height: auto;
+}
+
+footer {
+	background: black;
+	display: table-row;
+	height:7px;
+}
