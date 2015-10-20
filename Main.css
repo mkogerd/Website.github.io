@@ -22,7 +22,7 @@
 	font-family: "Impact", Times, serif;
 	font-style: oblique;
 	color: white;
-	font-size: 30px;
+	font-size: em2;
 }
 .nav {
 	font-size: 0;
@@ -58,5 +58,5 @@
 footer {
 	background: black;
 	display: table-row;
-	height:7px;
+	height:1px;
 }
