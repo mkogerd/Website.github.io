@@ -28,7 +28,7 @@
 	font-size: 0;
 	list-style-type:none;
 }
-.nav ul{
+.nav ul {
 	padding-right: 10%;
 	padding-left: 10%;
 }
@@ -37,6 +37,18 @@
 	width: 20%;
 	text-align: center;	
 	display: inline-block;
+	
+}
+
+.nav li  a {
+	display: block;
+	border: 1px solid transparent;
+	text-decoration: none;
+}
+
+.nav li  a:hover {
+	background-color: grey;
+	border: 1px double black;
 }
 
 .blog {
