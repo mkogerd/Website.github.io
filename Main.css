@@ -18,7 +18,7 @@ header .brand {
 	padding: 0;
 	height:auto;
 	width: 100%;
-	font-size: 10vh;
+	font-size: 8vh;
 	display: block;
 	background-color: black;
 }
@@ -31,9 +31,9 @@ header .brand h1 {
 	display: inline-block;
 }
 header .brand img{
-	display: inline-block;
 	width: auto;
-	height: 7vh;
+	height: 6vh;
+	display: inline-block;
 }
 
 nav {
