@@ -46,7 +46,7 @@ nav ul {
 	padding-left: 10%;
 }
 nav li {
-	font-size: 4vh;
+	font-size: 20px;
 	width: 20%;
 	text-align: center;	
 	display: inline-block;
@@ -54,7 +54,6 @@ nav li {
 
 nav li a {
 	display: block;
-	height: 5vh;
 	border: 1px solid transparent;
 	text-decoration: none;
 }
