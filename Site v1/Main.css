@@ -1,0 +1,92 @@
+/*  {margin:0; padding:0;}*/
+ html, body {
+	background-color: lightgrey;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+header{
+	margin: 0;
+	padding: 0;
+}
+header .brand {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	height:auto;
+	width: 100%;
+	font-size: 8vh;
+	display: block;
+	background-color: black;
+}
+header .brand h1 {
+	margin: 0;
+	font-family: "Impact", Times, serif;
+	font-style: oblique;
+	color: white;
+	font-size:75%; 
+	display: inline-block;
+}
+header .brand img{
+	width: auto;
+	height: 6vh;
+	display: inline-block;
+	margin: 0px 2vw;
+}
+
+nav {
+	font-size: 0;
+	list-style-type:none;
+}
+nav ul {
+	padding-right: 10%;
+	padding-left: 10%;
+}
+nav li {
+	font-size: 20px;
+	width: 20%;
+	text-align: center;	
+	display: inline-block;
+}
+
+nav li a {
+	display: block;
+	border: 1px solid transparent;
+	text-decoration: none;
+}
+
+nav li  a:hover {
+	background-color: grey;
+}
+
+
+.blog {
+	background-color: white;
+	margin: 5% 10%;
+	padding-left: 15%;
+    padding-right: 15%;
+	padding-bottom: 2em;
+    border: 4px solid black;
+}
+.blog h2 {
+	text-decoration: underline;
+}
+.blog p {
+	text-align: justify;
+}	
+.icon-bar {
+	padding:20px;
+	height: auto;
+}
+.icon-bar a {
+	text-decoration: none;
+}
+
+footer {
+	background: black;
+	display: table-row;
+	height:1px;
+}
