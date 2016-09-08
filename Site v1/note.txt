@@ -1,1 +1,0 @@
-look into bootstrap and boilerplate for fancy html stuff

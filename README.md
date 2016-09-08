@@ -1,2 +1,1 @@
-# Website.github.io
-Testing website hosting
+Personal website made for networking and resume distribution.
