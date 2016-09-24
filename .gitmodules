@@ -1,3 +1,6 @@
 [submodule "resume"]
 	path = resume
 	url = https://github.com/mkogerd/resume.git
+[submodule "iot-leds"]
+	path = iot-leds
+	url = https://github.com/mkogerd/iot-leds.git
