@@ -9,6 +9,15 @@
 		<meta name="author" content="Koger Darden">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		
+		<!-- Latest compiled and minified JQuery -->
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+		
+		<!-- Latest compiled and minified JQuery UI -->
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+		
+		<!-- LAtest JQuery UI CSS-->
+		<link href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css' rel='stylesheet' type='text/css'>
+
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
 
@@ -20,37 +29,30 @@
 
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
-		
-		<!-- Latest compiled and minified JQuery -->
-		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-
-
-<!--script>
-	$(function() {
-		$("#slider").slider("value");
-	});
-</script-->
+				
 		<!-- Main Stylesheet -->
 		<link rel="stylesheet" href="main.css">
+		
 	</head>
 	<body>
-		<nav class="navbar navbar-default">
+		<nav class="navbar navbar-default text-centered">
 			<div class="container-fluid">
-				<div class="navbar-header">
-					<a class="navbar-brand" href="/iot-leds/index.php">Colors...</a>
+			
+				<div class="col-sm-6">
+					<div class="navbar-header">
+						<a class="navbar-brand" href="/iot-leds/index.php">Colors...</a>
+					</div>
 				</div>
-				<ul class="nav navbar-nav">
-					<li><a href="#">Phee</a></li>
-					<li><a href="#">Phi</a></li>
-					<li><a href="#">Pho</a></li>
-					<li><a href="#">Phumb</a></li>
-				</ul>
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#">Phee</a></li>
-					<li><a href="#">Phi</a></li>
-					<li><a href="#">Pho</a></li>
-					<li><a href="#">Phumb</a></li>
-				</ul>
+				
+				<div class="col-sm-1">
+					<div id="swatch" class="ui-widget-content ui-corner-all navbar-brand" style="width:20px;height:20px;"></div>
+				</div>
+				
+				<div class="col-sm-5 container">
+					<div id="r" class="slider"></div>
+					<div id="g" class="slider"></div>
+					<div id="b" class="slider"></div>
+				</div>
 			</div>
 		</nav>
 		
@@ -72,7 +74,6 @@
 							<h2>About</h2>
 						</div>
 						<div class="panel-body">
-		<div id="slider"></div>
 							<p>I am a third year ECE student at UT Austin. Please contact me if you're interested in working with me!</p>
 						</div>
 					</div>
@@ -136,4 +137,25 @@
 		</footer>
 	</body>
 </html>
-
+<script>
+	function refreshSwatch() {
+		var red = $('#r').slider('value'),
+		green = $('#g').slider('value'),
+		blue = $('#b').slider('value');
+		$('#swatch').css( 'background-color', "rgb("+red+", "+green+", "+blue+")");
+	}
+	
+	$(function () {
+		// Set up JS sliders	
+		$('.slider').each(function() {
+			$(this).slider({
+				orientation: "horizontal",
+				range: "min",
+				max: 255,
+				//value: rgb[$(this).data('color')]
+				slide: refreshSwatch,
+				change: refreshSwatch
+			});
+		});
+	});
+</script>

@@ -29,3 +29,22 @@ footer .copyright {
 .btn {
 	margin-bottom: 20px;
 }
+
+#r .ui-slider-range { background: #ef2929; }
+#r .ui-slider-handle { border-color: #ef2929; }
+#g .ui-slider-range { background: #8ae234; }
+#g .ui-slider-handle { border-color: #8ae234; }
+#b .ui-slider-range { background: #729fcf; }
+#b .ui-slider-handle { border-color: #729fcf; }
+
+#swatch {
+	width: 120px;
+	height: 100px;
+	margin: 2px;
+	background:#000;
+	overflow: auto;
+}
+
+.slider {
+	overflow: hidden;
+}
