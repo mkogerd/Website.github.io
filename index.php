@@ -1,4 +1,11 @@
-<!DOCTYPE html>
+<?php
+        // Load current color values
+	$colorString = file_get_contents('iot-leds/color.txt');
+	$r = hexdec(file_get_contents('iot-leds/color.txt', NULL, NULL, 1, 2));
+	$g = hexdec(file_get_contents('iot-leds/color.txt', NULL, NULL, 3, 2));
+	$b = hexdec(file_get_contents('iot-leds/color.txt', NULL, NULL, 5, 2));
+?>
+
 <html lang="en-US">
 	<head>
 		<title>Michael Darden</title>
@@ -35,21 +42,22 @@
 		
 	</head>
 	<body>
+		<!-- Color Controls -->
 		<nav class="navbar navbar-default text-centered">
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-xs-12 col-sm-3 text-center">
-						<a class="btn btn-info btn-block" style="height:45px;margin:2px;" href="/iot-leds/index.php">More About Colors<br>(Functioning Page)</a>
+						<button class="btn btn-info btn-block" style="height:45px;margin:2px;" onClick="javascript:location.href = '/iot-leds/index.php';">More About Colors</button>
 					</div>
 					
 					<div class="col-xs-12  col-sm-3 text-centered" style="height:45px;">
-						<div id="swatch" class="ui-widget-content ui-corner-all navbar-brand"></div>
+					<div id="swatch" class="ui-widget-content ui-corner-all navbar-brand" style="background-color: <?php echo $colorString; ?>"></div>
 					</div>
 					
 					<div class="col-xs-12 col-sm-6">
-						<div id="r" class="slider"></div>
-						<div id="g" class="slider"></div>
-						<div id="b" class="slider"></div>
+						<div id="r" class="slider" data-color="r"></div>
+						<div id="g" class="slider" data-color="g"></div>
+						<div id="b" class="slider" data-color="b"></div>
 					</div>
 				</div>
 			</div>
@@ -143,18 +151,57 @@
 		blue = $('#b').slider('value');
 		$('#swatch').css( 'background-color', "rgb("+red+", "+green+", "+blue+")");
 	}
-	
+
+// Pre-made functions for loading title color
+       function hexFromRGB(r, g, b) {
+		var hex = [
+			r.toString( 16 ),
+			g.toString( 16 ),
+			b.toString( 16 )
+		];
+		$.each( hex, function( nr, val ) {
+			if ( val.length === 1 ) {
+				hex[ nr ] = "0" + val;
+			}
+		});
+		return hex.join( "" ).toUpperCase();
+	}
+
 	$(function () {
+		// Preload color values
+		var rgb = {
+			r: <?php echo $r; ?>,
+			g: <?php echo $g; ?>,
+			b: <?php echo $b; ?> 
+		}
+
 		// Set up JS sliders	
 		$('.slider').each(function() {
 			$(this).slider({
 				orientation: "horizontal",
 				range: "min",
 				max: 255,
-				//value: rgb[$(this).data('color')]
+				value: rgb[$(this).data('color')],
 				slide: refreshSwatch,
 				change: refreshSwatch
 			});
+		});
+
+		// Update colors on swatch-click
+		$('#swatch').click(function() {
+			var url = "iot-leds/form.php";
+			var color = "#"+hexFromRGB($("#r").slider("value"),$("#g").slider("value"),$("#b").slider("value"));
+			var params = "color="+encodeURIComponent(color);
+			var http = new XMLHttpRequest();
+
+			http.open("GET", url+"?"+params, true);
+			http.onreadystatechange = function()
+			{
+				    if(http.readyState == 4 && http.status == 200) {
+						    alert(http.responseText);
+							}
+			}
+			http.send(null);
 		});
 	});
 </script>
