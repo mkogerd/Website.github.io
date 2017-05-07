@@ -25,84 +25,107 @@
 		<link rel="stylesheet" href="main.css">
 	</head>
 	<body>
+	
+		<!-- project tabs -->
+		<div class="sidebar">
+			<div class="sidebarCaller"><img src="images/rgbIcon.png" > </div>
+				
+			<h2>Panel</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vulputate mi sed tempor congue. Aliquam erat volutpat. Donec hendrerit tincidunt commodo. Pellentesque at lacus laoreet, accumsan tortor eget, venenatis ligula. Ut leo est, mattis nec leo at, pellentesque lacinia ligula. Donec eu turpis id nisi mollis maximus nec ac nisl. Aenean felis nunc, congue nec consectetur malesuada, faucibus sit amet lectus. Integer accumsan facilisis elit at pulvinar. Morbi nec ipsum eget diam tristique interdum. Pellentesque sagittis, dolor sed mollis scelerisque, felis lacus dignissim nisl, eget feugiat ligula nisl at ligula. Mauris ultrices lorem ut libero convallis eleifend. Proin pulvinar leo eget arcu porta tempus. Nulla convallis dictum ipsum ut elementum.</p>
+		</div>
+	
 		<!-- Jumbotron/Title -->
-		<div class="jumbotron">
-		    <div class="title text-center">
-		        <h1><b>Michael Darden</b></h1>
-		        <p><b>Electrical/Computer Engineer</b></p>
+		<div class="parallax">
+			<div class="parallax-1">
+				<div class="parallax__layer parallax__layer--back">
+				</div>
+				<div class="parallax__layer parallax__layer--base">
+					<div class="title">
+						<h1><b>Michael Darden</b></h1>
+						<p><b>Electrical/Computer Engineer</b></p>
+					</div>	
+				</div>
 			</div>
-		</div>
-
-		<!-- Content -->
-		<div class="container text-center">
-			<!-- About Section -->
-			<div class="row">
-				<div class="col-xs-12">
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							<h2>About</h2>
+			
+			<!-- Content -->
+			<div class="parallax-2">
+				<div class="parallax__layer--base">
+					<div class="container text-center">
+						<!-- About Section -->
+						<div class="row">
+							<div class="col-xs-12">
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h2>About</h2>
+									</div>
+									<div class="panel-body">
+										<p>I am a third year ECE student at UT Austin. Please contact me if you're interested in working with me!</p>
+									</div>
+								</div>
+							</div>
 						</div>
-						<div class="panel-body">
-							<p>I am a third year ECE student at UT Austin. Please contact me if you're interested in working with me!</p>
+
+						<!-- Resume link -->
+						<div class="row">
+							<div class="col-xs-12">
+								<a type="button" class="btn btn-info btn-block btn-lg" href="resume/resume.pdf" target="_blank"><h2>Resume</h2></a>
+							</div>
+						</div>
+
+						<!-- Contact Info -->
+						<div class="row">
+							<div class="col-xs-12">
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h2>Contact</h2>
+									</div>
+									<div class="panel-body">
+										<p>Student Email:<br>
+										<a href="mailto:mkogerd@utexas.edu?Subject=Hello" target="_blank">mkogerd@utexas.edu</a>
+										</p>
+
+										<p>Linkedin:<br>
+										<a href="https://www.linkedin.com/in/mkogerd" target="_blank">https://www.linkedin.com/in/mkogerd</a>
+										</p>
+
+										<p>
+										Github:<br>
+										<a href="https://github.com/mkogerd" target="_blank">https://github.com/mkogerd</a><br>(all the code for this website is found <a href="https://github.com/mkogerd/mkogerd.github.io" target="_blank">here!</a>)</a>
+										</p>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+		
 
-			<!-- Resume link -->
-			<div class="row">
-				<div class="col-xs-12">
-					<a type="button" class="btn btn-info btn-block btn-lg" href="resume/resume.pdf" target="_blank"><h2>Resume</h2></a>
-				</div>
-			</div>
-
-			<!-- Contact Info -->
-			<div class="row">
-				<div class="col-xs-12">
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							<h2>Contact</h2>
-						</div>
-						<div class="panel-body">
-							<p>Student Email:<br>
-							<a href="mailto:mkogerd@utexas.edu?Subject=Hello" target="_blank">mkogerd@utexas.edu</a>
-							</p>
-
-							<p>Linkedin:<br>
-							<a href="https://www.linkedin.com/in/mkogerd" target="_blank">https://www.linkedin.com/in/mkogerd</a>
-							</p>
-
-							<p>
-							Github:<br>
-							<a href="https://github.com/mkogerd" target="_blank">https://github.com/mkogerd</a><br>(all the code for this website is found <a href="https://github.com/mkogerd/mkogerd.github.io" target="_blank">here!</a>)</a>
-							</p>
-						</div>
+			<!-- Footer -->
+			<footer class="nav text-center navbar-inverse navbar-bottom">
+				<!-- Link Icons -->
+				<div class="row icon-list">
+					<div class="col-xs-4">
+						<a href="mailto:mkogerd@utexas.edu?Subject=Hello" target="_blank"><i class="fa fa-envelope-o fa-3x"></i></a>
+					</div>
+					<div class="col-xs-4">
+						<a href="https://www.linkedin.com/in/mkogerd" target="_blank"><i class="fa fa-linkedin fa-3x"></i></a>
+					</div>
+					<div class="col-xs-4">
+						<a href="https://github.com/mkogerd" target="_blank"><i class="fa fa-github fa-3x"></i></a>
 					</div>
 				</div>
-			</div>
+
+				<!-- Copyright -->
+				<div class="row">
+					<div class="copyright">
+						© 2016 Michael Koger Darden
+					</div>
+				</div>
+			</footer>
 		</div>
-
-		<!-- Footer -->
-		<footer class="nav text-center navbar-inverse navbar-bottom">
-			<!-- Link Icons -->
-			<div class="row icon-list">
-				<div class="col-xs-4">
-					<a href="mailto:mkogerd@utexas.edu?Subject=Hello" target="_blank"><i class="fa fa-envelope-o fa-3x"></i></a>
-				</div>
-				<div class="col-xs-4">
-					<a href="https://www.linkedin.com/in/mkogerd" target="_blank"><i class="fa fa-linkedin fa-3x"></i></a>
-				</div>
-				<div class="col-xs-4">
-					<a href="https://github.com/mkogerd" target="_blank"><i class="fa fa-github fa-3x"></i></a>
-				</div>
-			</div>
-
-			<!-- Copyright -->
-			<div class="row">
-				<div class="copyright">
-					© 2016 Michael Koger Darden
-				</div>
-			</div>
-		</footer>
+		
+		
+		
 	</body>
 </html>
