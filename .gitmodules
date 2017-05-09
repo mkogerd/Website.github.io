@@ -1,3 +1,6 @@
 [submodule "resume"]
 	path = resume
 	url = https://github.com/mkogerd/resume.git
+[submodule "lyric-scroll"]
+	path = lyric-scroll
+	url = https://github.com/mkogerd/lyric-scroll.git
