@@ -93,11 +93,16 @@
 	transform: translateY(-50%);
 }
 .sidebar:hover {
-  left:0px;
+	left:0px;
 }
 .sidebar h2, .sidebar p {
-  padding:0px;
-  margin:0;
+	padding:0px;
+	margin:0;
+	position: absolute;
+	top: 50%;
+	left: 60%;
+	-webkit-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
 }
 
  /* Tweeks for individual sidebar elements */
@@ -106,6 +111,7 @@
 }
 .sidebar_lyrics {
 	top: 15%;
+	onClick: "javascript:location.href = 'lyric-scroll/index.html';"
 }
 .sidebar_lyrics img {
 	-webkit-filter: invert(1);
