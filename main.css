@@ -21,9 +21,9 @@
 	margin: 0;
 }
 
-/* Tab styling
+/* Full spanning sidebar
 -------------------------------------------- */
-.sidebar{
+/*.sidebar{
   position: fixed;
   background-color: rgba(0,0,0,.5); 
   color:#fff;
@@ -45,7 +45,7 @@
 	position:absolute;
 	height: 5vh;
 	width: 5vh; 
-	top: 50px;
+	top: 10%;
 	left:300px;
 	background-color: rgba(0,0,0,.5); 
 }
@@ -58,7 +58,60 @@
 }
 .sidebar:hover{
   left:0px;
+}*/
+
+/* Unit spanning sidebar
+-------------------------------------------- */
+.sidebar{
+  position: fixed;
+  background-color: rgba(0,0,0,.5); 
+  color:#fff;
+  height:5vh;
+  width:300px;
+  left: -300px;
+  transition: left 0.4s ease-in-out;
+  -o-transition: left 0.4s ease-in-out;
+  -ms-transition: left 0.4s ease-in-out;
+  -moz-transition: left 0.4s ease-in-out;
+  -webkit-transition: left 0.4s ease-in-out;
+  z-index: 1;
 }
+.sidebarCaller{
+	border-radius: 0px 25px 5px 0px;
+	position:absolute;
+	height: 5vh;
+	width: 5vh; 
+	top: 0px;
+	left:300px;
+	background-color: rgba(0,0,0,.5); 
+}
+.sidebarCaller img {
+	position: absolute;
+	max-height: 100%;
+	max-width: 100%;
+	top:50%;
+	transform: translateY(-50%);
+}
+.sidebar:hover {
+  left:0px;
+}
+.sidebar h2, .sidebar p {
+  padding:0px;
+  margin:0;
+}
+
+ /* Tweeks for individual sidebar elements */
+.sidebar_color {
+	top: 10%;
+}
+.sidebar_lyrics {
+	top: 15%;
+}
+.sidebar_lyrics img {
+	-webkit-filter: invert(1);
+   	filter: invert(1);
+}
+
 
 /* Other Stuff
 -------------------------------------------- */
@@ -113,7 +166,7 @@ footer .copyright {
 .parallax-1 .parallax__layer--back {
 	background-size: cover;
 	background-image: url("images/road1.jpg");
-	transform: translateZ(-1px) translateX(-9px) scale(2);
+	transform: translateZ(-1px) scale(2);
 }
 
 /* Content styling and sizing */
