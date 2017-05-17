@@ -16,22 +16,23 @@
 		
 		<!-- Navigation section -->
 		<nav>
-			<ul class="info">
-				<li>
-					Resume
-				</li>
-				<li>
-					Contact
-				</li>
-			</ul>
-			<ul class="projects">
-				<li>
-					Lights
-				</li>
-				<li>
-					Lyrics
-				</li>
-			</ul>
+			<button style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</button>
+			<div id="myNav" class="overlay" style="overflow:hidden;">
+
+				<button href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</button>
+
+				<div  class="overlay-content">
+					<ul class="info">
+						<li>Resume</li>
+						<li>Contact</li>
+					</ul>
+					<ul class="projects">
+						<li>Lights</li>
+						<li>Lyrics</li>
+					</ul>
+				</div>
+
+			</div>
 		</nav>
 
 		<!-- Title Section -->
@@ -45,3 +46,14 @@
 
 	</body>
 </html>
+
+
+<script>
+	function openNav() {
+	    document.getElementById("myNav").style.width = "100vw";
+	}
+
+	function closeNav() {
+	    document.getElementById("myNav").style.width = "0%";
+	}
+</script>
