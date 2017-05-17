@@ -38,11 +38,12 @@ nav {
 .overlay {
 	position: absolute;
 	top: 0;
-	height: 100vh;
+	height: 0%;
 	width: 100vw;
-	background-image: linear-gradient(rgba(0, 155, 255, 0.8), rgba(0, 155, 255, 0.8) );
-	background-size: cover;
-	overflow: hidden;
+	background-color: black;
+	opacity:0;
+	transition: opacity 0.3s;
+	transition-timing-function: ease-out;
 }
 
 .overlay-content {
@@ -53,8 +54,43 @@ nav {
 	transform: translate(-50%,-50%);
 }
 
-.overlay li {
+.overlay ul {
+	list-style-type: none;
 	text-align: center;
 	font-size: 10vh;
-	color: white;
+}
+
+.overlay a {
+	color: #818181;
+}
+
+/* Position the close button (top right corner) */
+.openbtn {
+    position: fixed;
+    top: 38px;
+    right: 56px;
+    font-size: 50px;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+    padding: 16px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
 }
