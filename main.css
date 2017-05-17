@@ -11,7 +11,7 @@ nav {
 /* Intro Styling
 ----------------------------------------------- */
 .intro {
-	position: absolute;
+	position: relative;
 	top: 0;
 	height: 100vh;
 	width: 100vw;
@@ -36,7 +36,7 @@ nav {
 /* Navigation Styling
 ----------------------------------------------- */
 .overlay {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	height: 0%;
 	width: 100vw;
