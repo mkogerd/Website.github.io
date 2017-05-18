@@ -7,31 +7,55 @@ nav {
 	z-index: 1;
 	position: absolute;
 }
+ul {
+	list-style-type: none;
+}
+a {
+	text-decoration: none;
+}
 
-/* Intro Styling
+/* Typography
 ----------------------------------------------- */
-.intro {
-	position: relative;
-	top: 0;
-	height: 100vh;
-	width: 100vw;
-	background-image: url('./images/road2.png'); /* Fallback Background Image for unsupported browsers */
-	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('./images/road2.png');
-	background-size: cover;
-	overflow: hidden;
+p {
+	font-family: 'Poppins', sans-serif;
+	color: #767676;
+	font-size: 14px;
+	line-height: 24px;
+	font-weight: 400;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6{
+	font-family: 'montserratsemibold';
+    font-weight: 400;
+    color: #4f4f4f;
+    margin: 0 0 15px;
+	text-transform:uppercase;
+}
+h1 {
+    font-size: 40px;
+    font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+}
+h2 {
+    font-size: 32px;
+	color: #484848;
+    font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+}
+h3 {
+    font-size: 24px;
+}
+h4 {
+    font-size: 18px;
+}
+h5 {
+    font-size: 16px;
+}
+h6 {
+    font-size: 13px;
 }
 
-.intro h1{
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	-webkit-transform: translate(-50%,-50%);
-	transform: translate(-50%,-50%);
-	text-align: left;
-	color: white;
-	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-	
-}
+
 
 /* Navigation Styling
 ----------------------------------------------- */
@@ -55,7 +79,6 @@ nav {
 }
 
 .overlay ul {
-	list-style-type: none;
 	text-align: center;
 	font-size: 10vh;
 }
@@ -83,7 +106,6 @@ nav {
 /* The navigation links inside the overlay */
 .overlay a {
     padding: 16px;
-    text-decoration: none;
     font-size: 36px;
     color: #818181;
     display: block; /* Display block instead of inline */
@@ -94,3 +116,86 @@ nav {
 .overlay a:hover, .overlay a:focus {
     color: #f1f1f1;
 }
+
+/* Intro Styling
+----------------------------------------------- */
+.intro {
+	position: relative;
+	top: 0;
+	height: 100vh;
+	width: 100vw;
+	background-image: url('./images/road2.png'); /* Fallback Background Image for unsupported browsers */
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('./images/road2.png');
+	background-size: cover;
+	overflow: hidden;
+}
+
+.intro h1{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	text-align: left;
+	color: white;
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+	
+}
+
+/* Contact Section Styling (ported from other website)
+----------------------------------------------- */
+.section-title {
+  	color: #494949;
+}
+.contact-section .section-title p {
+    color: #777777;
+    margin-bottom: 30px;
+}
+.contact-section .horizontal-line div {
+  margin: 0;
+}
+.contact-section .horizontal-line div.top {
+  margin-bottom: 5px;
+}
+
+.contact-text li {
+    margin-bottom: 25px;
+}
+.contact-text li:last-child{
+    margin-bottom: 0px;
+}
+.contact-text li i {
+    border: 1px solid #a8a8a8;
+    border-radius: 50%;
+    float: left;
+    font-size: 24px;
+    height: 47px;
+    line-height: 47px;
+    margin-right: 12px;
+    text-align: center;
+    width: 47px;
+	color: #919191;
+}
+.contact-text li h4,
+.contact-text li span {
+  position: relative;
+  top: 5px;
+}
+.contact-text li h4 {
+    color: #7b7b7b;
+}
+.contact-text li span,
+.contact-text li h4 {
+    overflow: hidden;
+}
+.contact-text li span a,
+.contact-text li span {
+    color: #979797;
+}
+.contact-text li span a:hover {
+    color: #7b7b7b;
+}
+
+
+
+
