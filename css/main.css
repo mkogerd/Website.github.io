@@ -14,7 +14,22 @@ ul {
 a {
 	text-decoration: none;
 }
-
+.container {
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+.section-title {
+  	color: #494949;
+  	text-align: center;
+}
+.bg-color-1 {
+	background-color: #ffffff;
+}
+.bg-color-2 {
+	background-color: #efefef;
+}
 /* Typography
 ----------------------------------------------- */
 p {
@@ -143,8 +158,8 @@ h6 {
 
 /* Contact Section Styling (ported from other website)
 ----------------------------------------------- */
-.section-title {
-  	color: #494949;
+.contact-section .section-title {
+  	text-align: left;
 }
 .contact-section .section-title p {
     color: #777777;
