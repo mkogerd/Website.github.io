@@ -14,6 +14,10 @@ ul {
 a {
 	text-decoration: none;
 }
+input {
+	background-color: transparent;
+    border: none;
+}
 .container {
 	margin-right: auto;
 	margin-left: auto;
@@ -193,13 +197,36 @@ h6 {
 /* Contact Section
 ----------------------------------------------- */
 .contact-text {
+	color: #7b7b7b;
 	display: grid;
-	grid-gap: 15px;
+	grid-column-gap: 15px;
+	grid-row-gap: 25px;
 	grid-template:
 		"in email" 
 		"github location"
 		/ auto 1fr
 		;
+}
+.contact-form {
+	display: grid;
+	grid-gap: 15px;
+	grid-template:
+		"name" 
+		"email"
+		"message" 140px
+		"button"
+		;
+}
+.contact-form input {
+	color: #7b7b7b;
+	line-height: 200%;
+	background-color: transparent;
+	border-bottom-style: dotted;
+    border-bottom: 1px dotted;
+}
+.contact-form textarea {
+	margin-top: 15px;
+	padding: 10px;
 }
 
 /* (styling ported from other website)
