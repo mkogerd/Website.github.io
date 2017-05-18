@@ -44,7 +44,7 @@ h1, h2, h3, h4, h5, h6{
 	font-family: 'montserratsemibold';
     font-weight: 400;
     color: #4f4f4f;
-    margin: 0 0 15px;
+    margin: 0;
 	text-transform:uppercase;
 }
 h1 {
@@ -156,27 +156,59 @@ h6 {
 	
 }
 
-/* Contact Section Styling (ported from other website)
+/* Grid play (applying)
+----------------------------------------------- */
+.container {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	display: grid;
+	grid-row-gap: 30px;
+	grid-template:
+		"title" 
+		"content"
+		;
+}
+.section-title {
+	grid-area: title;
+}
+
+/* Project Section
+----------------------------------------------- */
+/* New grid for gallery */
+.project-gallery {	
+	display: grid;
+	grid-gap: 30px;
+	grid-template: 
+		"content content content" auto
+		/ 1fr 1fr 1fr
+		;
+}
+/* scale images to fill out gallery grid horizontally */
+.project-gallery img {
+	max-width: 100%;
+  	border-radius: 20px;
+  	box-shadow: 5px 5px 5px #888888;
+}
+
+/* Contact Section
+----------------------------------------------- */
+.contact-text {
+	display: grid;
+	grid-gap: 15px;
+	grid-template:
+		"in email" 
+		"github location"
+		/ auto 1fr
+		;
+}
+
+/* (styling ported from other website)
 ----------------------------------------------- */
 .contact-section .section-title {
   	text-align: left;
 }
 .contact-section .section-title p {
     color: #777777;
-    margin-bottom: 30px;
-}
-.contact-section .horizontal-line div {
-  margin: 0;
-}
-.contact-section .horizontal-line div.top {
-  margin-bottom: 5px;
-}
-
-.contact-text li {
-    margin-bottom: 25px;
-}
-.contact-text li:last-child{
-    margin-bottom: 0px;
 }
 .contact-text li i {
     border: 1px solid #a8a8a8;
@@ -209,7 +241,3 @@ h6 {
 .contact-text li span a:hover {
     color: #7b7b7b;
 }
-
-
-
-
