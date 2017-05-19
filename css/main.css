@@ -21,8 +21,8 @@ input {
 .container {
 	margin-right: auto;
 	margin-left: auto;
-	padding-right: 15px;
-	padding-left: 15px;
+	/*padding-right: 15px;
+	padding-left: 15px;*/
 }
 .section-title {
   	color: #494949;
@@ -199,8 +199,7 @@ h6 {
 .contact-text {
 	color: #7b7b7b;
 	display: grid;
-	grid-column-gap: 15px;
-	grid-row-gap: 25px;
+	grid-gap: 15px;
 	grid-template:
 		"in email" 
 		"github location"
