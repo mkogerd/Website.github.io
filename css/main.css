@@ -141,7 +141,7 @@ h6 {
 	position: relative;
 	top: 0;
 	height: 100vh;
-	width: 100vw;
+	width: 100%;
 	background-image: url('../img/road2.png'); /* Fallback Background Image for unsupported browsers */
 	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('../img/road2.png');
 	background-size: cover;
