@@ -9,6 +9,9 @@
 		<meta name="author" content="Koger Darden">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+		<!-- Import Jquery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		
 		<!-- Normalize CSS -->
 		<link rel="stylesheet" href="./css/normalize.css">
 
@@ -33,12 +36,11 @@
 
 				<div  class="overlay-content">
 					<ul class="info">
+						<li><a href="#intro"><h2>Top&UpArrowBar;&UpArrow;&wedbar;&andv;&And;</h2></a></li>
+						<li><a href="#about"><h2>About</h2></a></li>
+						<li><a href="#projects"><h2>Projects</h2></a></li>
+						<li><a href="#contact"><h2>Contact</h2></a></li>
 						<li><a href="resume/resume.pdf" target="_blank"><h2>Resume</h2></a></li>
-						<li><a><h2>Contact</h2></a></li>
-					</ul>
-					<ul class="projects">
-						<li><a><h2>Lights</h2></a></li>
-						<li><a><h2>Lyrics</h2></a></li>
 					</ul>
 				</div>
 
@@ -46,7 +48,7 @@
 		</nav>
 
 		<!-- Title Section -->
-		<div class="intro">
+		<div id="intro" class="intro-section">
 			<h1>
 				Koger Darden
 				<br>
@@ -55,7 +57,7 @@
 		</div>
 
 		<!-- About Section -->
-		<div class="about-section bg-color-1">
+		<div id="about" class="about-section bg-color-1">
 			<div class="container">
 				<div class="section-title">
 					<h2>
@@ -79,7 +81,7 @@ Aenean suscipit nunc at varius feugiat. Donec pulvinar sagittis ultrices. Quisqu
 		</div>
 
 		<!-- Projects Section -->
-		<div class="project-section bg-color-2">
+		<div id="projects" class="project-section bg-color-2">
 			<div class="container">
 				<div class="section-title">
 					<h2>
@@ -98,7 +100,7 @@ Aenean suscipit nunc at varius feugiat. Donec pulvinar sagittis ultrices. Quisqu
 		</div>
 
 		<!-- Contact Section -->
-		<div class="contact-section bg-color-1">
+		<div id="contact" class="contact-section bg-color-1">
 			<div class="container">
 				<div class="section-title">
 					<h2>Contact me</h2>
@@ -135,13 +137,57 @@ Aenean suscipit nunc at varius feugiat. Donec pulvinar sagittis ultrices. Quisqu
 
 
 <script>
-	function openNav() {
+	
+	// Jquery Smooth-scroll
+	$('a[href*="#"]')	// Select all links with hashes
+	  // Remove links that don't actually link to anything
+	  .not('[href="#"]')
+	  .not('[href="#0"]')
+	  .click(function(event) {
+	  	// Stop any incomplete scrolling animations
+	  	$('html, body').stop();
+	    // On-page links
+	    if (
+	      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+	      && 
+	      location.hostname == this.hostname
+	    ) {
+	      // Figure out element to scroll to
+	      var target = $(this.hash);
+	      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+	      // Does a scroll target exist?
+	      if (target.length) {
+	        // Only prevent default if animation is actually gonna happen
+	        event.preventDefault();
+	        $('html, body').animate({
+	          scrollTop: target.offset().top
+	        }, 1000, function() {
+	          // Callback after animation
+	          // Must change focus!
+	          var $target = $(target);
+	          $target.focus();
+	          if ($target.is(":focus")) { // Checking if the target was focused
+	            return false;
+	          } else {
+	            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+	            $target.focus(); // Set focus again
+	          };
+	        });
+	      }
+	    }
+	  });
+
+    function openNav() {
 	    document.getElementById("myNav").style.height = "100vh";
 	    document.getElementById("myNav").style.opacity = "0.9";
+	    document.getElementById("intro").scrollIntoView({block: "end", behavior: "smooth"});
 	}
 
 	function closeNav() {
 	    document.getElementById("myNav").style.height = "0%";
 	    document.getElementById("myNav").style.opacity = "0";
 	}
+
+  
+
 </script>
