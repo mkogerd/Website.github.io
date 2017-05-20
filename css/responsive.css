@@ -1,28 +1,78 @@
 /* Small Mobile: 320px. (Default - mobile first) 
-------------------------------------------------- */
+================================================= */
 .container {
-	margin-right: auto;
-	margin-left: auto;
 	width:280px;
 }
+/* New grid for gallery */
+.project-gallery {	
+	display: grid;
+	grid-gap: 30px;
+	grid-template: 
+		"content" auto
+		/ 1fr
+		;
+}
+.contact-section .container {
+	grid-template:
+		"title" 
+		"content"
+		"form"
+		;
+}
 /* Large Mobile, Mobile Landscape: 480px.
-------------------------------------------------- */
-@media (min-width:480px) and (max-width: 767px){
+================================================= */
+@media (min-width:480px) {
 	.container{
-		width:480px;
+		width: 450px;
+	}
+	/* Gallery: 2 elements per row */
+	.project-gallery {	
+		grid-template: 
+			"content content" auto
+			/ 1fr 1fr
+			;
 	}
 } 
 /* Tablet: 768px.
-------------------------------------------------- */
-@media (min-width: 768px) and (max-width: 979px) {
+================================================= */
+@media (min-width: 768px) {
+	.container{
+		width: 738px;
+	}
+	/* Gallery: 3 elements per row */
+	.project-gallery {	
+		grid-template: 
+			"content content content" auto
+			/ 1fr 1fr 1fr
+			;
+	}
+	.contact-section .container {
+		grid-template:
+			"title form" 
+			"content form"
+			;
+	}
 }
 
 /* Browser: 980px.
-------------------------------------------------- */
-@media (min-width: 980px) and (max-width: 1199px) {
+================================================= */
+@media (min-width: 980px) {
+	.container{
+		width: 950px;
+	}
 }
 
 /* Large Browser: 1200px.
-------------------------------------------------- */
+================================================= */
 @media (min-width: 1200px) {	
+	.container{
+		width: 1170px;
+	}
+	/* Gallery: 4 elements per row */
+	.project-gallery {	
+		grid-template: 
+			"content content content content" auto
+			/ 1fr 1fr 1fr 1fr
+			;
+	}
 }
