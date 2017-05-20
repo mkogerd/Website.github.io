@@ -194,6 +194,7 @@ nav {
 /* Relative ancestor so elements inside can be stacked using absolute positioning */
 .project-gallery li {
 	position: relative;
+	z-index: 0; /* This fixes some animation overflow issues in safari */
 	border-radius: 20px;
   	box-shadow: 5px 5px 5px #888888;
 	overflow: hidden;	/* make contained elements adhere to li borders */
