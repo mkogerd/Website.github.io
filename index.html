@@ -84,12 +84,12 @@
 					</h2>
 				</div>
 				<ul class="project-gallery">
-					<li><a><img src="./img/mountain.jpg"></img></a></li>
-					<li><a><img src="./img/mountain.jpg"></img></a></li>
-					<li><a><img src="./img/mountain.jpg"></img></a></li>
-					<li><a><img src="./img/mountain.jpg"></img></a></li>
-					<li><a><img src="./img/mountain.jpg"></img></a></li>
-					<li><a><img src="./img/mountain.jpg"></img></a></li>
+					<li><a><img src="./img/logoGreen.png"></a></li>
+					<li><a><img src="./img/mountain.jpg"></a></li>
+					<li><a><img src="./img/road1.jpg"></a></li>
+					<li><a><img src="./img/ant.jpg"></a></li>
+					<li><a><img src="./img/vortex.jpg"></a></li>
+					<li><a><img src="./img/dota.jpg"></a></li>
 				</ul>
 			</div>
 		</div>
@@ -180,6 +180,17 @@
 	function closeNav() {
 	    document.getElementById("myNav").style.height = "0%";
 	    document.getElementById("myNav").style.opacity = "0";
+	}
+
+	/* Set gallery elements' heights as a fraction of their widths */
+	$(window).ready(updateHeight);
+	$(window).resize(updateHeight);
+	function updateHeight()
+	{
+	    var div = $('.project-gallery li');
+	    var width = div.width();
+	    
+	    div.css('height', (3/4)*width);
 	}
 
 </script>

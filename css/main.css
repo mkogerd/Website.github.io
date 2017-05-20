@@ -183,11 +183,24 @@ nav {
 
 /* 5. Project Section
 =============================================== */
-/* scale images to fill out gallery grid horizontally */
+/* scale images to fill out gallery grid */
 .project-gallery img {
-	max-width: 100%;
-  	border-radius: 20px;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+  	transition: all 1s ease;
+}
+/* Relative ancestor so elements inside can be stacked using absolute positioning */
+.project-gallery li {
+	position: relative;
+	border-radius: 20px;
   	box-shadow: 5px 5px 5px #888888;
+	overflow: hidden;	/* make contained elements adhere to li borders */
+}
+/* Zoom project image on hover */
+.project-gallery li:hover img,
+.project-gallery li:focus img{
+	transform: scale(1.2);
 }
 
 /* 6. Contact Section
