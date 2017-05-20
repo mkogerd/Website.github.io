@@ -23,7 +23,8 @@ a {
 }
 input {
 	background-color: transparent;
-    border: none;
+	border: none;
+    border-radius: 0;
 }
 .container {
 	margin-right: auto;
