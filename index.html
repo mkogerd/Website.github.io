@@ -163,10 +163,15 @@
 				</ul>
 
 				<form class="contact-form" action="https://formspree.io/mkogerd@utexas.edu" method="POST">
+					<!-- form Settings -->
+				    <input type="hidden" name="_subject" value="New message from website">
+				    <input type="hidden" name="_format" value="plain">
+				    <input type="text" name="_gotcha" style="display:none">
+				    <!-- Form Content -->
 				    <input type="text" name="name" placeholder="Your name">
 				    <input type="email" name="_replyto" placeholder="Your email">
 				    <textarea name="message" placeholder="Your message"></textarea>
-				    <button type="submit" value="Send" placeholder="Your message" data-complete-text="Thank you!">Send Message</button>
+				    <button type="submit" value="Send" placeholder="Your message">Send Message</button>
 				</form>
 
 			</div>
