@@ -158,25 +158,33 @@ nav {
 =============================================== */
 .intro-section {
 	position: relative;
-	top: 0;
-	height: 100vh;
-	width: 100%;
 	background-image: url('../img/road2.png'); /* Fallback Background Image for unsupported browsers */
 	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('../img/road2.png');
 	background-size: cover;
-	overflow: hidden;
 }
-
-.intro-section h1{
+/* Intro section is given special properties so sizes to the screen instead of its content */
+.intro-section .container {
+	height: 100vh;
+	/* container is also relative so text can be absolutely positioned to it */
+	position: relative; 
+	/* Remove extra default padding */
+	padding-top: 0;
+	padding-bottom: 0;
+}
+.intro-text {
+	width: 100%;
+	text-align: center;
 	position: absolute;
 	top: 50%;
-	left: 50%;
-	-webkit-transform: translate(-50%,-50%);
-	transform: translate(-50%,-50%);
-	text-align: left;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+.intro-text h1, .intro-text h3{
 	color: white;
 	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-	
+}
+.intro-text h1 {
+	padding-bottom: 20px;
 }
 /* 4. About Section
 =============================================== */
