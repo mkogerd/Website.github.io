@@ -161,12 +161,14 @@
 						<span>Austin, TX, USA</span>
 					</li>
 				</ul>
-				<form class="contact-form">
-					<input type="name" name="name" placeholder="Your name">
-					<input type="name" name="name" placeholder="Your email">
-					<textarea name="message" placeholder="Your message"></textarea>
-					<button type="button" name="submit" data-complete-text="Thank you!">Send Message</button>
+
+				<form class="contact-form" action="https://formspree.io/mkogerd@utexas.edu" method="POST">
+				    <input type="text" name="name" placeholder="Your name">
+				    <input type="email" name="_replyto" placeholder="Your email">
+				    <textarea name="message" placeholder="Your message"></textarea>
+				    <button type="submit" value="Send" placeholder="Your message" data-complete-text="Thank you!">Send Message</button>
 				</form>
+
 			</div>
 		</div>
 
