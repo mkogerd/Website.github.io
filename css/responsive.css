@@ -3,6 +3,18 @@
 .container {
 	width:280px;
 }
+.about-section .container {
+	display: grid;
+	grid-gap: 30px;
+	grid-template:
+		"title" 
+		"portrait"
+		"description"
+		"objective"
+		"resume"
+		/ 1fr;
+		;
+}
 /* New grid for gallery */
 .project-gallery {	
 	display: grid;
@@ -39,6 +51,15 @@
 	.container{
 		width: 738px;
 	}
+	.about-section .container {
+	display: grid;
+	grid-template:
+		"title title" 
+		"portrait description"
+		"resume objective"
+		/ 1fr 2fr;
+		;
+	}
 	/* Gallery: 3 elements per row */
 	.project-gallery {	
 		grid-template: 
@@ -59,6 +80,16 @@
 @media (min-width: 980px) {
 	.container{
 		width: 950px;
+	}
+	.about-section .container {
+	display: grid;
+	grid-template:
+		"title title" 
+		"portrait description"
+		"portrait objective"
+		"portrait resume"
+		/ 2fr 5fr;
+		;
 	}
 }
 

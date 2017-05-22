@@ -188,8 +188,24 @@ nav {
 }
 /* 4. About Section
 =============================================== */
-/* Nothing appears to be here yet. */
-
+.about-portrait {
+	grid-area: portrait;
+}
+.about-portrait img {
+	width: 100%;
+}
+.about-objective {
+	grid-area: objective;
+}
+.about-description {
+	grid-area: description;
+}
+.about-resume {
+	grid-area: resume;
+}
+.about-section p {
+	font-size: 18px;
+}
 /* 5. Project Section
 =============================================== */
 /* scale images to fill out gallery grid */
