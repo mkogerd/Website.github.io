@@ -210,6 +210,31 @@ nav {
 .about-section p {
 	font-size: 18px;
 }
+.about-resume {
+	text-decoration: none;
+	text-align: center;
+	font-family: 'montserratsemibold', sans-serif;
+    font-weight: 400;
+	text-transform:uppercase;
+	font-size: 21px;
+	color: white;
+	
+	border: 3px solid #777777;
+	border-radius: 40px;
+	padding: 20px;
+	background: #777777;
+	
+	transition: all 0.2s, border-radius 1s; 
+}
+.about-resume:hover {
+	border-radius: 3px;
+	
+}
+.about-resume:active {
+ 	background: white;
+ 	color: #777777;
+ 	font-weight: 600;
+}
 /* 5. Project Section
 =============================================== */
 /* scale images to fill out gallery grid */
