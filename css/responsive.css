@@ -9,6 +9,7 @@
 	grid-template:
 		"title" 
 		"portrait"
+		"greeting"
 		"description"
 		"objective"
 		"resume"
@@ -55,6 +56,7 @@
 	display: grid;
 	grid-template:
 		"title title" 
+		"portrait greeting"
 		"portrait description"
 		"resume objective"
 		/ 1fr 2fr;
@@ -85,6 +87,7 @@
 	display: grid;
 	grid-template:
 		"title title" 
+		"portrait greeting"
 		"portrait description"
 		"portrait objective"
 		"portrait resume"

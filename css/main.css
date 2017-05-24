@@ -85,6 +85,7 @@ h4 {
 }
 h5 {
     font-size: 16px;
+    text-transform: auto;
 }
 h6 {
     font-size: 13px;
@@ -194,11 +195,15 @@ nav {
 .about-portrait img {
 	width: 100%;
 }
-.about-objective {
-	grid-area: objective;
+.about-greeting {
+	grid-area: greeting;
 }
 .about-description {
 	grid-area: description;
+	text-align: justify;
+}
+.about-objective {
+	grid-area: objective;
 }
 .about-resume {
 	grid-area: resume;
