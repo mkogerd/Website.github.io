@@ -43,6 +43,30 @@ input {
 	color: #494949;
   	text-align: center;
 }
+.hr-top {
+	color: #979797;
+	margin: auto;
+	margin-top: 5px;
+	margin-bottom: 5px;
+    width: 200px;
+    border: solid 1px;
+    border-radius: 4px;
+}
+.hr-bottom {
+	color: #979797;
+	margin: auto;
+	margin-bottom: 8px;
+    width: 150px;
+    border: solid 1px;
+    border-radius: 4px;
+    
+}
+.contact-section .hr-top {
+	margin-left: 0;
+}
+.contact-section .hr-bottom {
+	margin-left: 0;
+}
 .bg-color-1 {
 	background-color: #ffffff;
 }
