@@ -99,58 +99,66 @@ nav {
 .overlay {
 	position: fixed;
 	top: 0;
-	height: 0%;
 	width: 100vw;
 	background-color: black;
-	opacity:0;
+	height: 100vh;
+	height: 0%;
+	opacity: 0;
 	transition: opacity 0.3s;
 	transition-timing-function: ease-out;
 }
-
+/* Style the open button (top right corner) */
+.openbtn {
+    position: fixed;
+    top: 5vh;
+    right: 5vw;
+    font-size: 25px;
+    color: #aaa;
+    background-color: #000;
+    opacity: 0.5;
+    border: solid #ddd 2px;
+    border-radius: 4px;
+    padding: 5px 15px;
+}
+.openbtn:hover {
+    background-color: #ddd;
+    color: #000;
+}
 .overlay-content {
 	position: absolute;
 	top: 50%;
 	left: 50%;
+	text-align: center;
+	font-size: 10vh;
 	-webkit-transform: translate(-50%,-50%);
 	transform: translate(-50%,-50%);
 }
-
-.overlay ul {
-	text-align: center;
-	font-size: 10vh;
-}
-
-.overlay a {
-	color: #818181;
-}
-
 /* Position the close button (top right corner) */
-.openbtn {
-    position: fixed;
-    top: 38px;
-    right: 56px;
-    font-size: 50px;
-}
-
-/* Position the close button (top right corner) */
-.overlay .closebtn {
+.closebtn {
+	color: #484848;
     position: absolute;
     top: 20px;
     right: 45px;
     font-size: 60px;
 }
-
 /* The navigation links inside the overlay */
-.overlay a {
+.overlay-content a {
+	color: #484848;
+    font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 36px;
+	color: #484848;
+
     padding: 16px;
-    font-size: 36px;
-    color: #818181;
     display: block; /* Display block instead of inline */
     transition: 0.3s; /* Transition effects on hover (color) */
 }
-
 /* When you mouse over the navigation links, change their color */
-.overlay a:hover, .overlay a:focus {
+.overlay-content a:hover, 
+.overlay-content a:focus,
+.closebtn:hover,
+.closebtn:focus {
     color: #f1f1f1;
 }
 

@@ -29,21 +29,16 @@
 		
 		<!-- Navigation section -->
 		<nav>
-			<a class="openbtn" onclick="openNav()">&#9776;</button>
+			<a id="openbtn" class="openbtn" onclick="openNav()">&#9776;</a>
 			<div id="myNav" class="overlay" style="overflow:hidden;">
-
 				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-
-				<div  class="overlay-content">
-					<ul class="info">
-						<li><a href="#intro"><h2>Home</h2></a></li>
-						<li><a href="#about"><h2>About</h2></a></li>
-						<li><a href="#projects"><h2>Projects</h2></a></li>
-						<li><a href="#contact"><h2>Contact</h2></a></li>
-						<li><a href="resume/resume.pdf" target="_blank"><h2>Resume</h2></a></li>
-					</ul>
-				</div>
-
+				<ul class="overlay-content">
+					<li><a href="#intro">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#projects">Projects</a></li>
+					<li><a href="#contact">Contact</a></li>
+					<li><a href="resume/resume.pdf" target="_blank">Resume</a></li>
+				</ul>
 			</div>
 		</nav>
 
@@ -228,11 +223,13 @@
     function openNav() {
 	    document.getElementById("myNav").style.height = "100vh";
 	    document.getElementById("myNav").style.opacity = "0.9";
+		document.getElementById("openbtn").style.opacity = "0";
 	}
 
 	function closeNav() {
 	    document.getElementById("myNav").style.height = "0%";
 	    document.getElementById("myNav").style.opacity = "0";
+	    document.getElementById("openbtn").style.opacity = "0.5";
 	}
 
 	/* Set gallery elements' heights as a fraction of their widths */
