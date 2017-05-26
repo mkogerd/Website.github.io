@@ -87,7 +87,8 @@
 					<div class="hr-bottom"></div>
 				</div>
 				<ul class="project-gallery">
-					<li><a><img src="./img/logoGreen.png">
+					<li data-project="proj1"><a>
+						<img src="./img/logoGreen.png">
 						<div class="project-info-box" onclick="">
 							<div class="project-info-text">
 								<h4>Green Thing</h4>
@@ -95,7 +96,8 @@
 							</div>
 						</div>	
 					</a></li>
-					<li><a><img src="./img/mountain.jpg">
+					<li data-project="proj2"><a>
+						<img src="./img/mountain.jpg">
 						<div class="project-info-box" onclick="">
 							<div class="project-info-text">
 								<h4>Mountains</h4>
@@ -103,7 +105,8 @@
 							</div>
 						</div>	
 					</a></li>
-					<li><a><img src="./img/road1.jpg">
+					<li data-project="proj3"><a>
+						<img src="./img/road1.jpg">
 						<div class="project-info-box" onclick="">
 							<div class="project-info-text">
 								<h4>Tall Hill</h4>
@@ -111,7 +114,8 @@
 							</div>
 						</div>	
 					</a></li>
-					<li><a><img src="./img/ant.jpg">
+					<li data-project="proj4"><a>
+						<img src="./img/ant.jpg">
 						<div class="project-info-box" onclick="">
 							<div class="project-info-text">
 								<h4>Ants</h4>
@@ -119,7 +123,8 @@
 							</div>
 						</div>	
 					</a></li>
-					<li><a><img src="./img/vortex.jpg">
+					<li data-project="proj5"><a>
+						<img src="./img/vortex.jpg">
 						<div class="project-info-box" onclick="">
 							<div class="project-info-text">
 								<h4>Wormhole</h4>
@@ -127,7 +132,8 @@
 							</div>
 						</div>	
 					</a></li>
-					<li><a><img src="./img/dota.jpg">
+					<li data-project="proj6"><a>
+						<img src="./img/dota.jpg">
 						<div class="project-info-box" onclick="">
 							<div class="project-info-text">
 								<h4>DotA 2</h4>
@@ -137,6 +143,50 @@
 					</a></li>
 				</ul>
 			</div>
+
+			<div id="proj1-modal" class="modal">
+				<!-- Modal content -->
+				<div class="modal-content">
+				    <span class="modal-close">&times;</span>
+				    <p>Some text in the project1 Modal..</p>
+			  </div>
+			</div>
+			<div id="proj2-modal" class="modal">
+				<!-- Modal content -->
+				<div class="modal-content">
+				    <span class="modal-close">&times;</span>
+				    <p>Some text in the project2 Modal..</p>
+			  </div>
+			</div>
+			<div id="proj3-modal" class="modal">
+				<!-- Modal content -->
+				<div class="modal-content">
+				    <span class="modal-close">&times;</span>
+				    <p>Some text in the project3 Modal..</p>
+			  </div>
+			</div>
+			<div id="proj4-modal" class="modal">
+				<!-- Modal content -->
+				<div class="modal-content">
+				    <span class="modal-close">&times;</span>
+				    <p>Some text in the project4 Modal..</p>
+			  </div>
+			</div>
+			<div id="proj5-modal" class="modal">
+				<!-- Modal content -->
+				<div class="modal-content">
+				    <span class="modal-close">&times;</span>
+				    <p>Some text in the project5 Modal..</p>
+			  </div>
+			</div>
+			<div id="proj6-modal" class="modal">
+				<!-- Modal content -->
+				<div class="modal-content">
+				    <span class="modal-close">&times;</span>
+				    <p>Some text in the project6 Modal..</p>
+			  </div>
+			</div>
+
 		</div>
 
 		<!-- Contact Section -->
@@ -245,8 +295,25 @@
 	{
 	    var div = $('.project-gallery li');
 	    var width = div.width();
-	    
 	    div.css('height', (3/4)*width);
 	}
+
+	/* --------------- Modal Menu Scripts --------------- */
+	// Open Modal on gallery portrait click
+	$("ul.project-gallery li").click(function(e) {
+		// Get name of project chosen
+		var project = $(this).attr('data-project');
+		// Choose associated modal element
+		var modal = document.getElementById(project+"-modal");
+		// Open Modal for that block
+		modal.style.display = "block";
+	});
+	// Close Modal on exit button click
+	$(".modal-close").click(function(e) {
+		// Get associated modal parent (".get(0)" converts it back from a jquery object)
+		var modal = $(this).closest('.modal').get(0);
+		// Close modal for that block
+		modal.style.display = "none";
+	});
 
 </script>

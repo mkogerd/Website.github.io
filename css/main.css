@@ -10,7 +10,7 @@
  */
 
 /* 1. General
-=============================================== */
+======================================================================== */
 * {
 	padding: 0;
 	margin: 0;
@@ -74,7 +74,7 @@ input {
 	background-color: #efefef;
 }
 /* 2. Typography
-=============================================== */
+======================================================================== */
 p {
 	font-family: 'Poppins', sans-serif;
 	color: #767676;
@@ -115,7 +115,7 @@ h6 {
 }
 
 /* 3. Navigation Section
-=============================================== */
+======================================================================== */
 nav {
 	z-index: 1;
 	position: absolute;
@@ -187,7 +187,7 @@ nav {
 }
 
 /* 4. Intro Section
-=============================================== */
+======================================================================== */
 .intro-section {
 	position: relative;
 	background-image: url('../img/road2.png'); /* Fallback Background Image for unsupported browsers */
@@ -219,7 +219,7 @@ nav {
 	padding-bottom: 20px;
 }
 /* 4. About Section
-=============================================== */
+======================================================================== */
 .about-portrait {
 	grid-area: portrait;
 }
@@ -268,7 +268,7 @@ nav {
  	font-weight: 600;
 }
 /* 5. Project Section
-=============================================== */
+======================================================================== */
 /* scale images to fill out gallery grid */
 .project-gallery img {
 	width: 100%;
@@ -312,9 +312,47 @@ nav {
 	top: 50%;
 	transform: translateY(-50%);
 }
+/* ----- Modal Boxes for projects ----- */
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.modal-close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
 
 /* 6. Contact Section
-=============================================== */
+======================================================================== */
 .contact-text {
 	color: #7b7b7b;
 	display: grid;
@@ -349,7 +387,7 @@ nav {
 }
 
 /* (styling ported from other website)
-=============================================== */
+======================================================================== */
 .contact-section .section-title {
   	text-align: left;
 }
