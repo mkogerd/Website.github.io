@@ -303,17 +303,17 @@
 	$("ul.project-gallery li").click(function(e) {
 		// Get name of project chosen
 		var project = $(this).attr('data-project');
-		// Choose associated modal element
-		var modal = document.getElementById(project+"-modal");
-		// Open Modal for that block
-		modal.style.display = "block";
+		// Choose associated modal element JS object
+		var modal = $("#"+project+"-modal");
+		// Open Modal for that project
+		modal.fadeIn();	
 	});
 	// Close Modal on exit button click
 	$(".modal-close").click(function(e) {
-		// Get associated modal parent (".get(0)" converts it back from a jquery object)
-		var modal = $(this).closest('.modal').get(0);
-		// Close modal for that block
-		modal.style.display = "none";
+		// Get associated modal parent object
+		var modal = $(this).closest('.modal');
+		// Close chosen modal
+		modal.fadeOut();
 	});
 
 </script>
