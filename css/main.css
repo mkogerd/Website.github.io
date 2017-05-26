@@ -277,7 +277,7 @@ nav {
   	transition: all .5s ease;
 }
 /* Relative ancestor so elements inside can be stacked using absolute positioning */
-.project-gallery li {
+.project-thumbnail {
 	position: relative;
 	z-index: 0; /* This fixes some animation overflow issues in safari */
 	border-radius: 20px;
@@ -285,8 +285,8 @@ nav {
 	overflow: hidden;	/* make contained elements adhere to li borders */
 }
 /* Zoom project image on hover */
-.project-gallery li:hover img,
-.project-gallery li:focus img{
+.project-thumbnail:hover img,
+.project-thumbnail:focus img{
 	transform: scale(1.2);
 }
 /* The info box that shows when the mouse hovers over a project */
@@ -301,8 +301,8 @@ nav {
 	transition: all .5s ease;
 }
 /* show info box on hover */
-.project-gallery li:hover .project-info-box,
-.project-gallery li:focus .project-info-box {
+.project-thumbnail:hover .project-info-box,
+.project-thumbnail:focus .project-info-box {
 	opacity: 1;
 }
 /* Position project info text at bottom of box */
