@@ -101,7 +101,7 @@
 						</div>
 						<!-- Modal -->
 						<div class="modal">
-							<div class="modal-content">
+							<div class="container">
 							    <span class="modal-close">&times;</span>
 							    <p>Some text in the project1 Modal..</p>
 							</div>
@@ -121,7 +121,7 @@
 						</div>
 						<!-- Modal -->
 						<div class="modal">
-							<div class="modal-content">
+							<div class="container">
 							    <span class="modal-close">&times;</span>
 							    <p>Some text in the project2 Modal..</p>
 							</div>
@@ -141,7 +141,7 @@
 						</div>
 						<!-- Modal -->
 						<div class="modal">
-							<div class="modal-content">
+							<div class="container">
 							    <span class="modal-close">&times;</span>
 							    <p>Some text in the project3 Modal..</p>
 							</div>
@@ -161,7 +161,7 @@
 						</div>
 						<!-- Modal -->
 						<div class="modal">
-							<div class="modal-content">
+							<div class="container">
 							    <span class="modal-close">&times;</span>
 							    <p>Some text in the project4 Modal..</p>
 							</div>
@@ -181,9 +181,9 @@
 						</div>
 						<!-- Modal -->
 						<div class="modal">
-							<div class="modal-content">
-							    <span class="modal-close">&times;</span>
-							    <p>Some text in the project5 Modal..</p>
+							<div class="container">
+								    <span class="modal-close">&times;</span>
+								    <p>Some text in the project5 Modal..</p>
 							</div>
 						</div>
 					</li>
@@ -201,7 +201,7 @@
 						</div>
 						<!-- Modal -->
 						<div class="modal">
-							<div class="modal-content">
+							<div class="container">
 							    <span class="modal-close">&times;</span>
 							    <p>Some text in the project6 Modal..</p>
 							</div>
@@ -329,6 +329,8 @@
 		var modal = $(this).next('.modal');
 		// Open Modal for that project
 		modal.fadeIn();	
+		// Stop background from scrolling
+		$('body').css('overflow', 'hidden');
 	});
 	// Close Modal on exit button click
 	$(".modal-close").click(function(e) {
@@ -336,6 +338,8 @@
 		var modal = $(this).closest('.modal');
 		// Close chosen modal
 		modal.fadeOut();
+		// Resume background scrolling
+		$('body').css('overflow', '');
 	});
 
 </script>
