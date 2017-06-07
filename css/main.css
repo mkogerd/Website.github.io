@@ -328,12 +328,33 @@ nav {
 }
 /* The Close Button */
 .modal-close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
+    color: #767676;
     font-weight: bold;
 }
-
+/* Button for links to projects */
+.modal-btn {
+    font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #767676;
+	border: solid #767676 4px;
+	padding: 5px 50px;
+	margin: 0 auto;
+         
+}
+.modal-btn:hover,
+.modal-btn:focus {
+    color: black;
+    border-color: black;
+    cursor: pointer;
+}
+/* Make modal container more fluid and keep content out of way of close button */
+.modal .container {
+	box-sizing: border-box;
+	width:100%;
+	max-width: 920px;
+	padding: 120px 80px 0px 80px;
+}
 .modal-close:hover,
 .modal-close:focus {
     color: black;
