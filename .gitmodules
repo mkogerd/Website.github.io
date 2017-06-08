@@ -4,3 +4,6 @@
 [submodule "lyric-scroll"]
 	path = lyric-scroll
 	url = https://www.github.com/mkogerd/lyric-scroll
+[submodule "iot-leds"]
+	path = iot-leds
+	url = https://github.com/mkogerd/iot-leds
