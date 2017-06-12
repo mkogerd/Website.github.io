@@ -193,6 +193,7 @@ nav {
 	background-image: url('../img/alley-lg.jpg'); /* Fallback Background Image for unsupported browsers */
 	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('../img/alley-lg.jpg');
 	background-size: cover;
+	background-position: center;
 }
 /* Intro section is given special properties so sizes to the screen instead of its content */
 .intro-section .container {
