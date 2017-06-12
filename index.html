@@ -331,13 +331,18 @@
 
 	/* --------------- Modal Menu Scripts --------------- */
 	// Open Modal on gallery portrait click
+	var scrollTop;
 	$(".project-thumbnail").click(function(e) {
 		// Choose associated modal object (search by nearest sibbling element)
 		var modal = $(this).next('.modal');
-		// Open Modal for that project
-		modal.fadeIn();	
-		// Stop background from scrolling
+		// Record top position value and stop scrolling (on desktop)
+		scrollTop = $('body').scrollTop();
 		$('body').css('overflow', 'hidden');
+		// Open Modal for that project
+		modal.fadeIn( function() {
+			// fix background to prevent double-scrolling (needed for mobile)
+			$('body').css('position', 'fixed');
+		});	
 	});
 	// Close Modal on exit button click
 	$(".modal-close").click(function(e) {
@@ -345,8 +350,10 @@
 		var modal = $(this).closest('.modal');
 		// Close chosen modal
 		modal.fadeOut();
-		// Resume background scrolling
+		// Restore top location
 		$('body').css('overflow', '');
+		$('body').css('position', '');
+		$('body').scrollTop(scrollTop);
 	});
 
 </script>
