@@ -330,6 +330,7 @@ nav {
 .modal-close {
     color: #767676;
     font-weight: bold;
+    right: 25px;
 }
 /* Button for links to projects */
 .modal-btn {
@@ -353,7 +354,7 @@ nav {
 	box-sizing: border-box;
 	width:100%;
 	max-width: 920px;
-	padding: 100px 80px 80px 80px;
+	padding: 100px 70px 70px 80px;
 }
 .modal-close:hover,
 .modal-close:focus {
