@@ -16,6 +16,11 @@
 		/ 1fr;
 		;
 }
+/* Quality of background image used */
+.intro-section {
+	background-image: url('../img/alley-lg.jpg'); /* Fallback Background Image for unsupported browsers */
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('../img/alley-lg.jpg');
+}
 /* New grid for gallery */
 .project-gallery {	
 	display: grid;
@@ -82,6 +87,11 @@
 @media (min-width: 980px) {
 	.container{
 		width: 950px;
+	}
+	/* Quality of background image increases */
+	.intro-section {
+		background-image: url('../img/alley-xl.jpg'); /* Fallback Background Image for unsupported browsers */
+		background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('../img/alley-xl.jpg');
 	}
 	.about-section .container {
 	display: grid;
