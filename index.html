@@ -91,6 +91,29 @@
 					<li>
 						<!-- Thumbnail -->
 						<div class="project-thumbnail">
+							<img src="./img/blackhole-sm.png">
+							<div class="project-info-box" onclick="">
+								<div class="project-info-text">
+									<h4>Black Hole IO Game</h4>
+									<p>Online multiplayer game implementing 2D gravity physics created with html canvas, javascript, and node.js.</p>
+								</div>
+							</div>
+						</div>
+						<!-- Modal -->
+						<div class="modal">
+							<span class="closebtn modal-close">&times;</span>
+							<div class="container">
+							    <p>This was meant to be an online multiplayer "io" game implementing 2D gravity physics created with html canvas, javascript, and node.js. The networking was handled using the socket.io module. Due to server inadequacies, the current online version tends to lag. However, the game generally runs well when hosted locally. This is a work in progress, so future game logic and packet optimizations will hopefully make it run smoother on a wider range of platforms. </p>
+							    <a class="modal-btn" href="https://github.com/mkogerd/gravity-game">View code</a>
+							    <a class="modal-btn" href="http://game.mkogerd.com">Check it out</a>
+							    <img src="./img/blackhole.png" style="text-align:center;width:100%;height:auto;margin:auto;" alt="blackhole game screenshot"/>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<!-- Thumbnail -->
+						<div class="project-thumbnail">
 							<img src="./img/tracking-sm.jpg">
 							<div class="project-info-box" onclick="">
 								<div class="project-info-text">
@@ -126,11 +149,11 @@
 					<li>
 						<!-- Thumbnail -->
 						<div class="project-thumbnail">
-							<img src="./img/blackhole-sm.png">
+							<img src="./img/dbod-sm.jpg">
 							<div class="project-info-box" onclick="">
 								<div class="project-info-text">
-									<h4>Black Hole IO Game</h4>
-									<p>Online multiplayer game implementing 2D gravity physics created with html canvas, javascript, and node.js.</p>
+									<h4>Database of Dance</h4>
+									<p>Accessible database of dance videos made using flask and compiled python based webscraping.</p>
 								</div>
 							</div>
 						</div>
@@ -138,10 +161,10 @@
 						<div class="modal">
 							<span class="closebtn modal-close">&times;</span>
 							<div class="container">
-							    <p>This was meant to be an online multiplayer "io" game implementing 2D gravity physics created with html canvas, javascript, and node.js. The networking was handled using the socket.io module. Due to server inadequacies, the current online version tends to lag. However, the game generally runs well when hosted locally. This is a work in progress, so future game logic and packet optimizations will hopefully make it run smoother on a wider range of platforms. </p>
-							    <a class="modal-btn" href="https://github.com/mkogerd/gravity-game">View code</a>
-							    <a class="modal-btn" href="http://game.mkogerd.com">Check it out</a>
-							    <img src="./img/blackhole.png" style="text-align:center;width:100%;height:auto;margin:auto;" alt="blackhole game screenshot"/>
+							    <p> This project was something a friend and I started at a hackathon and then continued to work on until it was more presentable. The idea was to collect a bunch of youtube videos linked from <a href="http://libraryofdance.org">libraryofdance.org</a> and make them easily accessible from a single interface. Beautiful Soup was used to scrape the data from the original website which was organized in a .csv file. Then, with the aid of a python library called youtube_dl, all of these videos were downloaded and downsampled to a lower resolution inorder to reduce loadtime. We then used flask to dynamically populate html templates according to our .csv database and create the website for us. The current live version was deployed using gunicorn and an nginx webserver.</p>
+							    <a class="modal-btn" href="https://github.com/mkogerd/database-of-dance">View code</a>
+							    <a class="modal-btn" href="http://dance.mkogerd.com">Check it out</a>
+							    <img src="./img/dbod.png" style="text-align:center;width:100%;height:auto;margin:auto;" alt="blackhole game screenshot"/>
 							</div>
 						</div>
 					</li>
