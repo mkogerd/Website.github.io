@@ -223,7 +223,8 @@ nav {
 	grid-area: portrait;
 }
 .about-portrait img {
-	width: 100%;
+	background-size: cover;
+	
 }
 .about-greeting {
 	grid-area: greeting;
